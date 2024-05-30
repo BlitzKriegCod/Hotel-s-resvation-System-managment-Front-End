@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import "bootstrap/scss/bootstrap";
+
+.ng-valid:not(form).ng-touched {
+  border-left: 5px solid lightskyblue; /* Estilo para campos válidos */
+}
+
+.ng-invalid:not(form).ng-touched {
+  border-left: 5px solid lightcoral; /* Estilo para campos inválidos */
+}

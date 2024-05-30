@@ -1,0 +1,94 @@
+<div
+  class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5"
+  tabindex="-1"
+  role="dialog"
+  id="modalSignup"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header p-5 pb-4 border-bottom-0">
+        <h1 class="fw-bold mb-0 fs-2 center">Login</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="closeModal()"
+        ></button>
+      </div>
+
+      <div class="modal-body p-5 pt-0">
+        <form [formGroup]="userAuthForm" (ngSubmit)="Submit()">
+          <div class="mb-3">
+            <!-- Caampo para el nombre -->
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control rounded-3"
+                id="floatingInput"
+                formControlName="name"
+                placeholder="Nombre"
+              />
+              <label for="floatingInput">Name</label>
+              <div
+                *ngIf="name?.invalid && (name?.dirty || name?.touched)"
+                class="text-danger"
+              >
+                <div *ngIf="name?.errors?.['required']">
+                  <small>A name is required</small>
+                </div>
+                <div
+                  *ngIf="name?.errors?.['minlength'] || name?.errors?.['minlength']"
+                >
+                  <small
+                    >The name must contain between 4 and 20 characters</small
+                  >
+                </div>
+                <div
+                  *ngIf="name?.errors?.['maxlength'] || name?.errors?.['maxlength']"
+                >
+                  <small>Maximun 20 characters</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Campo para la contraseña -->
+            <div class="form-floating mb-3">
+              <input
+                type="password"
+                class="form-control rounded-3"
+                id="floatingPassword"
+                formControlName="password"
+                placeholder="Contraseña"
+              />
+              <label for="floatingPassword">Password</label>
+
+              <div
+                *ngIf="
+                  password?.invalid && (password?.dirty || password?.touched)
+                "
+                class="text-danger"
+              >
+                <div *ngIf="password?.errors?.['required']">
+                  <small>Password required</small>
+                </div>
+                <div *ngIf="password?.errors?.['pattern']">
+                  <small>The password must meet security requirements</small>
+                </div>
+              </div>
+            </div>
+            <!-- Campo para confirmar la contraseña -->
+          </div>
+          <button
+            class="w-100 mb-2 btn btn-lg rounded-3 btn-primary"
+            [disabled]="userAuthForm.invalid"
+            type="submit"
+          >
+            Login
+          </button>
+          <hr class="my-4" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

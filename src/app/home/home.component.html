@@ -1,0 +1,125 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom bg-body-tertiary rounded" aria-label="Barra de Navegación Nebrasca Arrow Hotel">
+  <div class="container-fluid">
+    <img src="assets/logo.png" class="logo" height="60" width="60">
+    <a class="navbar-brand" href="#">Nebrasca Arrow</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample09">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Reservas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Contacto</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="true">Servicios</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Habitaciones</a></li>
+                    <li><a class="dropdown-item" href="#">Restaurante</a></li>
+                    <li><a class="dropdown-item" href="#">Spa</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="d-flex">
+          <button type="button" class="btn btn-primary mx-2" (click)="openRegistrationModal()">Registra tu cuenta</button>
+          <button type="button" class="btn btn-secondary mx-2"  (click)="openLoginModal()">Iniciar sesión</button>
+        </div>
+    </div>
+  </div>
+</nav>
+<!-- Carousel -->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Diapositiva 3"></button>
+  </div>
+  <style>
+
+
+      .carousel-item img {
+
+
+         height: 700px;
+         object-fit: cover;
+         filter: grayscale(20%); /* Añade un filtro a las imágenes */
+         background-size: cover;
+         background-position: center;
+         background-image: linear-gradient(to center, rgba(255,0,34,0.5), rgba(0,255,0,0.5));
+
+
+       }
+
+     .carousel-caption h5,
+     .carousel-caption p {
+         font-size: 18px;
+       }
+
+     .carousel-caption {
+         position: absolute;
+         bottom: 30px;
+         left: 50%;
+         transform: translateX(-50%);
+         color: #fff;
+         padding: 10px;
+         border-radius: 5px;
+       }
+
+       #carouselExampleCaptions {
+         overflow: hidden;
+       }
+
+       #carouselExampleCaptions:hover {
+         background-color: rgba(0, 0, 0, 0.5);
+       }
+
+
+  </style>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="img-fluid" src="assets/1.webp" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <div class="jumbotron">
+          <h1 class="display-4">Bienvenido al Nebrasca Arrow Hotel</h1>
+          <p class="lead">Disfruta de nuestra selección de habitaciones y servicios exclusivos diseñados para tu comodidad.</p>
+          <hr class="my-4">
+          <p>Explora nuestras opciones de alojamiento y reserve su habitación preferida hoy mismo.</p>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Reservar Ahora</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img class="img-fluid" src="assets/2.webp" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h3 >Increible Ofertas Gastronomicas</h3>
+        <p>Descubre nuestro restaurante gourmet y spa relajante, perfectos para completar tu estancia.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img class="img-fluid "  src="assets/3.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Tercera diapositiva</h3>
+        <p>Ofrecemos experiencias únicas y memorables en cada habitación, diseñadas para satisfacer tus necesidades.</p>
+      </div>
+    </div>
+  </div>
+  
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
